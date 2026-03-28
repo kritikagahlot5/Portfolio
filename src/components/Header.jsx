@@ -21,7 +21,7 @@ const Header = () => {
       </nav>
       <div style={{ display: 'flex', gap: '16px' }}>
         <a href="mailto:gahlotkritika59@gmail.com" title="Email"><Mail size={20} /></a>
-        <a href="https://linkedin.com" target="_blank" rel="noreferrer" title="LinkedIn"><Linkedin size={20} /></a>
+        <a href="https://www.linkedin.com/in/kritikagahlot980/" target="_blank" rel="noreferrer" title="LinkedIn"><Linkedin size={20} /></a>
         <a href="https://github.com/kritikagahlot5" target="_blank" rel="noreferrer" title="GitHub"><Github size={20} /></a>
       </div>
       <style>{`

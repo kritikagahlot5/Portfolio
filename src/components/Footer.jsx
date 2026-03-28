@@ -30,7 +30,7 @@ const Footer = () => {
                 <div style={{ display: 'grid', gap: '20px' }}>
                     <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>Socials</h3>
                     <div style={{ display: 'flex', gap: '24px' }}>
-                        <a href="https://linkedin.com" target="_blank" rel="noreferrer" title="LinkedIn"><Linkedin size={24} /></a>
+                        <a href="https://www.linkedin.com/in/kritikagahlot980/" target="_blank" rel="noreferrer" title="LinkedIn"><Linkedin size={24} /></a>
                         <a href="https://github.com/kritikagahlot5" target="_blank" rel="noreferrer" title="GitHub"><Github size={24} /></a>
                     </div>
                 </div>
