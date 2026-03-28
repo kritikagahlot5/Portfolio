@@ -1,45 +1,52 @@
 import React from 'react';
-import { Calendar, Briefcase, ChevronRight } from 'lucide-react';
+import { Briefcase, MapPin, Calendar, CheckCircle2 } from 'lucide-react';
 
 const Experience = () => {
     return (
-        <section id="experience">
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '48px', textAlign: 'center' }}>Professional <span className="gradient-text">Experience</span></h2>
-            <div className="glass-card" style={{ display: 'flex', gap: '48px', padding: '40px', position: 'relative' }}>
-                <div style={{ flex: '0 0 100px', textAlign: 'center' }}>
-                    <div style={{ backgroundColor: 'rgba(59, 130, 246, 0.1)', color: 'var(--primary)', padding: '16px', borderRadius: '16px', border: '1px solid var(--primary-glow)' }}>
-                        <Briefcase size={32} style={{ marginInline: 'auto' }} />
+        <section id="experience" style={{ maxWidth: '1000px' }}>
+            <h2 className="text-gradient" style={{ fontSize: '3.5rem', marginBottom: '80px', textAlign: 'center' }}>Professional <span style={{ color: '#fff' }}>Impact</span></h2>
+            
+            <div className="timeline">
+                <div className="timeline-item reveal card-elite" style={{ padding: '60px', marginLeft: '20px' }}>
+                    <div className="timeline-node" style={{ 
+                        position: 'absolute', left: '-58px', top: '10px', 
+                        width: '16px', height: '16px', borderRadius: '50%', 
+                        background: 'var(--primary)', border: '4px solid var(--bg-dark)'
+                    }}></div>
+
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '24px', marginBottom: '40px' }}>
+                        <div>
+                            <h3 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '8px' }}>NetSuite Technical Consultant</h3>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '20px', color: 'var(--primary)', fontWeight: 700 }}>
+                                <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><Briefcase size={18} /> AGSuite Technologies</span>
+                                <span style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)' }}><MapPin size={18} /> Udaipur, India</span>
+                            </div>
+                        </div>
+                        <div style={{ 
+                            padding: '12px 24px', borderRadius: '14px', 
+                            background: 'rgba(16, 185, 129, 0.05)', 
+                            border: '1px solid var(--primary)', 
+                            color: 'var(--primary)', fontWeight: 800, fontSize: '0.9rem', letterSpacing: '1px'
+                        }}>
+                            <Calendar size={18} style={{ marginBottom: '-3px', marginRight: '10px' }} /> OCT 2024 - PRESENT
+                        </div>
+                    </div>
+
+                    <div className="stagger-container" style={{ display: 'grid', gap: '24px' }}>
+                        {[
+                            'Architected high-performance SuiteScript 2.0/2.1 solutions (User Events, Clients, Map/Reduce) to automate global ERP workflows, reducing process latency by ~40%.',
+                            'Lead integration developer for secure RESTlet services, bridging NetSuite with enterprise CRM/ERP ecosytems to ensure data integrity during real-time synchronization.',
+                            'Managed the full Software Development Life Cycle (SDLC), from initial business requirement discovery to production deployment and UAT.',
+                            'Optimized NetSuite performance through record customization, SuiteFlow automation, and advanced scripting for financial and operational data accuracy.'
+                        ].map((point, i) => (
+                            <div key={i} style={{ display: 'flex', gap: '16px', color: 'var(--text-muted)', lineHeight: 1.8, fontSize: '1.1rem' }}>
+                                <CheckCircle2 size={22} style={{ color: 'var(--primary)', flexShrink: 0, marginTop: '4px' }} />
+                                {point}
+                            </div>
+                        ))}
                     </div>
                 </div>
-                <div style={{ flex: 1 }}>
-                    <h3 style={{ fontSize: '1.5rem', marginBottom: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
-                        NetSuite Technical Consultant
-                        <span style={{ fontSize: '0.85rem', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '8px', opacity: 0.8, color: 'var(--accent)' }}>
-                            <Calendar size={14} /> Oct 2024 - Present
-                        </span>
-                    </h3>
-                    <h4 style={{ color: 'var(--primary)', fontStyle: 'italic', marginBottom: '20px' }}>AGSuite Technologies</h4>
-                    <ul style={{ display: 'grid', gap: '12px' }}>
-                        {[
-                            'Engineered SuiteScript 2.0/2.1 solutions including User Event, Client, Map/Reduce, Scheduled, and Suitelet scripts to automate end-to-end business workflows, reducing manual processing time by ~40%.',
-                            'Developed RESTlets to integrate NetSuite with external platforms including CRM, ERP, and e-commerce systems, enabling seamless real-time data exchange.',
-                            'Customized records, forms, and workflows based on client business logic; provided ongoing technical support and performance optimization for production environments.',
-                            'Collaborated with cross-functional teams and stakeholders to gather requirements and deliver tailored NetSuite solutions within project timelines.'
-                        ].map((item, index) => (
-                            <li key={index} style={{ display: 'flex', gap: '12px', color: 'var(--text-muted)' }}>
-                                <ChevronRight size={18} style={{ color: 'var(--primary)', flexShrink: 0, marginTop: '4px' }} />
-                                {item}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
             </div>
-            <style>{`
-                @media (max-width: 768px) {
-                    .glass-card { flex-direction: column !important; gap: 24px !important; text-align: left !important; }
-                    .glass-card h3 { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
-                }
-            `}</style>
         </section>
     );
 };

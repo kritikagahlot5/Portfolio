@@ -1,35 +1,37 @@
 import React from 'react';
-import { GraduationCap, Trophy, MapPin } from 'lucide-react';
+import { Target, Award, GraduationCap, MapPin, BarChart } from 'lucide-react';
 
 const Education = () => {
     return (
-        <section id="education">
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '48px', textAlign: 'center' }}>Academic <span className="gradient-text">Background</span></h2>
-            <div style={{ display: 'grid', gap: '32px', maxWidth: '800px', marginInline: 'auto' }}>
-                <div className="glass-card" style={{ display: 'flex', gap: '32px', padding: '40px', position: 'relative' }}>
-                    <div style={{ color: 'gold' }}>
-                        <Trophy size={40} />
+        <section id="education" className="reveal">
+            <h2 style={{ fontSize: '3.5rem', marginBottom: '80px', textAlign: 'center' }}>Academic <span className="text-gradient">Records</span></h2>
+            
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '64px' }}>
+                <div style={{ padding: '60px', background: 'var(--bg-card)', borderRadius: '32px', border: '1px solid var(--border)', position: 'relative' }}>
+                    <div style={{ 
+                        position: 'absolute', top: '30px', right: '30px', 
+                        padding: '8px 16px', borderRadius: '100px', 
+                        background: 'rgba(251, 191, 36, 0.1)', border: '1px solid #fbbf24',
+                        color: '#fbbf24', fontSize: '0.75rem', fontWeight: 800, letterSpacing: '1px'
+                    }}>
+                        GOLD MEDALIST
                     </div>
-                    <div>
-                        <h3 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>Master of Computer Applications (MCA)</h3>
-                        <p style={{ color: 'var(--primary)', fontWeight: 600, marginBottom: '8px', fontSize: '1.1rem' }}>
-                            Gold Medalist – Top Rank in Batch
-                        </p>
-                        <p style={{ color: 'var(--text-main)', marginBottom: '8px' }}>Mohanlal Sukhadia University, Udaipur</p>
-                        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Class of 2024</p>
+                    <GraduationCap size={40} style={{ color: 'var(--primary)', marginBottom: '32px' }} />
+                    <h3 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '8px' }}>Master of Computer Applications</h3>
+                    <p style={{ color: 'var(--primary)', fontWeight: 700, fontSize: '1.1rem', marginBottom: '16px' }}>Specialization in Computational Analytics</p>
+                    <div style={{ display: 'grid', gap: '8px', opacity: 0.6 }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><MapPin size={16} /> Mohanlal Sukhadia University</div>
+                        <div>Academic Excellence Award (Batch Rank 1) | Class of 2024</div>
                     </div>
                 </div>
-                <div className="glass-card" style={{ display: 'flex', gap: '32px', padding: '40px' }}>
-                    <div style={{ color: 'var(--primary)' }}>
-                        <GraduationCap size={40} />
-                    </div>
-                    <div>
-                        <h3 style={{ fontSize: '1.5rem', marginBottom: '8px' }}>Bachelor of Science (Computer Science)</h3>
-                        <p style={{ color: 'var(--accent)', fontWeight: 600, marginBottom: '8px', fontSize: '1.1rem' }}>
-                            Graduated with 79.8%
-                        </p>
-                        <p style={{ color: 'var(--text-main)', marginBottom: '8px' }}>Guru Nanak Girls PG College, Udaipur</p>
-                        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Class of 2021</p>
+
+                <div style={{ padding: '60px', background: 'var(--bg-card)', borderRadius: '32px', border: '1px solid var(--border)' }}>
+                    <BarChart size={40} style={{ color: 'var(--primary)', marginBottom: '32px' }} />
+                    <h3 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '8px' }}>Bachelor of Science</h3>
+                    <p style={{ color: 'var(--text-main)', opacity: 0.8, fontSize: '1.1rem', marginBottom: '16px' }}>Computer Science & Data Fundamentals</p>
+                    <div style={{ display: 'grid', gap: '8px', opacity: 0.6 }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><MapPin size={16} /> Guru Nanak Girls PG College</div>
+                        <div>Score: 79.8% | Class of 2021</div>
                     </div>
                 </div>
             </div>
