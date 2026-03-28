@@ -10,7 +10,7 @@ const Header = () => {
       padding: '12px 32px'
     }}>
       <div className="logo" style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--primary)' }}>
-        KG.
+        Kritika Gahlot
       </div>
       <nav style={{ display: 'flex', gap: '32px', fontSize: '0.9rem', fontWeight: 500 }}>
         <a href="#about" className="nav-link">About</a>

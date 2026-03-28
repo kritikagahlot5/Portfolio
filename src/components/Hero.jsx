@@ -27,9 +27,17 @@ const Hero = () => {
                     padding: '10px 24px', borderRadius: '100px', 
                     background: 'rgba(168, 85, 247, 0.08)', border: '1px solid var(--primary)',
                     color: 'var(--primary)', fontSize: '0.85rem', fontWeight: 800, letterSpacing: '2px',
-                    marginBottom: '40px'
+                    marginBottom: '20px'
                 }}>
                     <Terminal size={14} /> SYSTEM: NEURAL_ENGINE_ACTIVE
+                </div>
+
+                <div style={{ 
+                    fontSize: '1.25rem', fontWeight: 800, letterSpacing: '4px', 
+                    textTransform: 'uppercase', color: 'var(--text-main)', 
+                    marginBottom: '20px', opacity: 0.8 
+                }}>
+                    Kritika Gahlot
                 </div>
 
                 <h1 style={{ 
